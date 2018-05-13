@@ -34,7 +34,16 @@ public class Utilites {
         return list;
     }
 
+    public static boolean isCamelCasePattern(String pattern) {
+        int count = 0;
+        for (char c : pattern.trim().toCharArray()) {
+            if (c < 'Z') count++;
+        }
+        return count != 0;
+    }
+
+
     public static void main(String[] args) {
-        System.out.println((splitByWildCard("*hhdGvv*bbvH")));
+        System.out.println((isCamelCasePattern("geyfgP")));
     }
 }

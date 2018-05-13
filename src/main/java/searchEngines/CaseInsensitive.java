@@ -15,7 +15,7 @@ public class CaseInsensitive {
         String patternCut;
         String patternUsed = "";
 
-        while (text1 < 900) {
+        while (true) {
 
             String currentPattern = pattern.substring(patternPoint);
             String currentText = text.substring(text1, text2);
