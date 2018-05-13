@@ -1,6 +1,9 @@
 package searchEngines;
 
-public class CaseInsensitive {
+/**
+ * Combined search engine uses in case of case insensitive search and wild card search
+ */
+public class Combined {
 
     public static boolean goMatch(String text, String pattern) {
 

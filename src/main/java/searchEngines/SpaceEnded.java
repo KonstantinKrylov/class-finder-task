@@ -10,7 +10,7 @@ public class SpaceEnded {
 
         if (!isWildCard) {
 
-            if(!isCamelCasePattern(pattern)) return CaseInsensitive.goMatch(text.toLowerCase(), pattern.trim());
+            if(!isCamelCasePattern(pattern)) return Combined.goMatch(text.toLowerCase(), pattern.trim());
 
             List<String> textList = splitByUpperCase(text);
             List<String> patternList = splitByUpperCase(pattern.trim());

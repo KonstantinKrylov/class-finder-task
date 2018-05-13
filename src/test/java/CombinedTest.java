@@ -5,17 +5,17 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static searchEngines.CaseInsensitive.*;
+import static searchEngines.Combined.*;
 
 
 @RunWith(Parameterized.class)
-public class CaseInsensitiveTest {
+public class CombinedTest {
 
     private String text;
     private String pattern;
     private boolean expected;
 
-    public CaseInsensitiveTest(String text, String pattern, boolean expected) {
+    public CombinedTest(String text, String pattern, boolean expected) {
         this.text = text;
         this.pattern = pattern;
         this.expected = expected;

@@ -1,6 +1,5 @@
 package searchEngines;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 import static util.Utilites.*;
@@ -11,7 +10,7 @@ public class WildCard {
         String asteriskLessPattern = splitByWildCard(pattern).stream()
                                                             .collect(Collectors.joining());
 
-        return CaseInsensitive.goMatch(text,asteriskLessPattern);
+        return Combined.goMatch(text,asteriskLessPattern);
     }
 
     public static void main(String[] args) {
