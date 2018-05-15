@@ -79,13 +79,14 @@ public class Utils {
         }
 
         for (char c : pattern.toCharArray()) {
-            if (c < 'A' || c > 'z' || (c > 'Z' && c < 'a')) {
+            if (c < 'A' || c > 'z' || (c > 'Z' && c < 'a') || pattern.contains("**") || pattern.contains("  ")) {
                 if (c != ' ' && c != '*') {
                     System.out.print("Invalid pattern...");
                     return false;
                 }
             }
         }
+        
         char patternStart = pattern.charAt(0);
         if (patternStart > 'Z' && isCamelCasePattern(pattern)) {
             System.out.print("Specify valid class name pattern or use \"*\" as first symbol or instead spaces...");
